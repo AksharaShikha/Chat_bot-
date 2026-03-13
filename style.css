@@ -10,64 +10,64 @@ height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-background:linear-gradient(135deg,#1e1221,#1e051c);
+background:linear-gradient(135deg,#ff7eb3,#ff2e93);
 }
 
-.chat-container{
+.container{
 width:420px;
-height:650px;
-background:#252323;
-border-radius:12px;
+height:620px;
+background:white;
+border-radius:15px;
 display:flex;
 flex-direction:column;
 overflow:hidden;
-box-shadow:0 10px 40px rgba(0,0,0,0.5);
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
 }
 
 .header{
-background:#b36fca;
+background:#ff2e93;
 color:white;
-padding:14px;
+padding:15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 }
 
 .controls button{
-background:none;
+margin-left:8px;
+background:white;
 border:none;
-color:white;
-font-size:18px;
+padding:6px 10px;
+border-radius:6px;
 cursor:pointer;
-margin-left:10px;
 }
 
-.messages{
+.chat{
 flex:1;
 padding:15px;
 overflow-y:auto;
 display:flex;
 flex-direction:column;
-gap:12px;
+gap:10px;
 }
 
 .message{
 max-width:75%;
 padding:10px 14px;
-border-radius:10px;
+border-radius:12px;
 font-size:14px;
-position:relative;
+animation:fadeIn .3s ease;
 }
 
 .user{
-background:#bb3eb5;
+background:#ff2e93;
 color:white;
 align-self:flex-end;
 }
 
 .bot{
-background:#1d4a3d;
-color:white;
+background:#ffd1e6;
+color:black;
 align-self:flex-start;
 }
 
@@ -77,50 +77,55 @@ opacity:0.6;
 margin-top:4px;
 }
 
-.typing{
-font-size:14px;
-opacity:0.7;
-}
-
-.input-area{
+.inputBox{
 display:flex;
-border-top:1px solid #d112d1;
+border-top:1px solid #ddd;
 }
 
-.input-area input{
+.inputBox input{
 flex:1;
 padding:12px;
 border:none;
 outline:none;
-background:#b85bcf;
-color:rgb(22, 9, 9);
 }
 
-.input-area button{
-background:#e989ee;
+.inputBox button{
+background:#ff2e93;
 border:none;
-padding:12px 18px;
 color:white;
+padding:12px 18px;
 cursor:pointer;
 }
 
-.input-area button:hover{
-background:#8e1790;
+.inputBox button:hover{
+background:#e60073;
 }
+
+
 
 .light{
-background:#f3ccef;
+background:#ffe6f2;
 }
 
-.light .chat-container{
-background:rgb(255, 255, 255);
-}
-
-.light .bot{
-background:#2ba586;
-color:rgb(255, 255, 255);
+.light .container{
+background:#fff0f7;
 }
 
 .light .user{
-background:#bf46d2;
+background:#ff66a3;
+}
+
+.light .bot{
+background:#ffd6e8;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
